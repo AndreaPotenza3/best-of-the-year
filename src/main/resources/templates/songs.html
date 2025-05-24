@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 th:text="'Pagina delle canzoni'"></h1>
+    <ul>
+        <li th:each="song : ${songs}">
+            <a th:href="@{'/songs/' + ${song.id}}" th:text="${song.title}"></a>
+        </li>
+    </ul>
+</body>
+</html>

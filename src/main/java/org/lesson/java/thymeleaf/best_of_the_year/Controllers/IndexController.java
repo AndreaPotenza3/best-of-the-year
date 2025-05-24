@@ -30,7 +30,7 @@ public class IndexController {
 
         return "movies";
     }
-
+ 
     @GetMapping("/songs")
     public String showSongs(Model model) {
 
@@ -54,9 +54,9 @@ public class IndexController {
     }
 
     if (foundMovie != null) {
-        model.addAttribute("title", foundMovie.getTitle());
+        model.addAttribute("movie", foundMovie);
     } else {
-        model.addAttribute("title", "Film non trovato");
+        model.addAttribute("movie", "Film non trovato");
     }
 
         return "movie-detail";
@@ -76,9 +76,9 @@ public class IndexController {
     }
 
     if (foundSong != null) {
-        model.addAttribute("title", foundSong.getTitle());
+        model.addAttribute("song", foundSong);
     } else {
-        model.addAttribute("title", "Canzone non trovata");
+        model.addAttribute("song", "Canzone non trovata");
     }
 
         return "song-detail";
