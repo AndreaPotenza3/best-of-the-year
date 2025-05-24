@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <th:block th:fragment="head-styles">
+        <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.3/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{/css/style.css}">
+    </th:block>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <th:block th:fragment="navbar">
+            <nav class="d-flex align-items-center py-3 px-1 gap-4">
+                    <a th:href="@{'/'}" th:text="'Best of'" class="text-dark text-decoration-none fs-1"></a>
+                    <a th:href="@{'/movies'}" th:text="'Movies'" class="text-white text-decoration-none p-2 bg-secondary rounded-2"></a>
+                    <a th:href="@{'/songs'}" th:text="'Songs'" class="text-white text-decoration-none p-2 bg-secondary rounded-2"></a>
+            </nav>
+        </th:block>
+    </header>
+    
+</body>
+</html>

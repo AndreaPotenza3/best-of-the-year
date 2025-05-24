@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <th:block th:replace="~{fragments :: head-styles}"/>
     <title>Best of the year!</title>
 </head>
 <body>
     <header>
-        <h1 th:text="'Best of the year by ' + ${name}"></h1>
+        <th:block th:replace="~{fragments :: navbar}"/>
     </header>
     <main>
-        <ul id="movie-list">
-        </ul>
+        <div class="container pt-5">
+            <h1 class="danger text-center" th:text="'Best of by ' + ${name}"></h1>
+            <div class="row justify-content-center gap-3 pt-2">
+                <img th:src="@{/imgs/img3.png}" alt="image">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ullam recusandae aliquid. Consequuntur deserunt porro fugiat eius dolore enim dolorum culpa officiis accusantium soluta sint, voluptatem reiciendis ab, eveniet omnis?</p>
+           </div>
+        </div>
     </main>
-    <script th:src="@{/js/app.js}"></script>
 </body>
 </html>
